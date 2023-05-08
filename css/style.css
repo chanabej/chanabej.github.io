@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     background-color: #f8ece4;
     font-family: 'Raleway', sans-serif;
@@ -11,54 +12,47 @@ body {
     padding: 10px;
     background-color: #fff;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-    margin-top:30px;
-    width:100%;
+    margin-top: 30px;
+    width: 100%;
 }
-  
+
 .nav-logo {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
     color: #333;
-    margin-left:100px;
-    margin-top:0;
-    margin-bottom:0;
+    margin-left: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-  
+
 .nav-menu {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     list-style: none;
     padding: 0;
     margin-right: 5%;
-    margin-top:2%;
-    width:100%;
-}
-  
-.nav-item {
-    width:10%;
-    display:flex;
-    justify-content: center;
+    margin-top: 2%;
+    width: 100%;
 }
 
-.item{
-    padding-top:5%;
+.nav-item {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
 }
-  
+
 .nav-item a {
     text-decoration: none;
     color: #333;
     font-size: 21px;
     font-weight: bold;
-    height:100%;
+    height: 100%;
 }
-  
+
 .nav-item a:hover {
     color: gold;
-}
-  
-p{
-    margin:20px;
 }
 
 .nav-toggle {
@@ -66,14 +60,13 @@ p{
 }
 
 .flag {
-    width:5%;
+    width: 5%;
 }
 
-
+/* Responsive Styles */
 @media only screen and (max-width: 768px) {
-
-    .logo{
-        width:80%;
+    .logo {
+        width: 80%;
     }
 
     .nav-menu {
@@ -83,21 +76,21 @@ p{
     .navbar {
         flex-direction: column;
     }
-    
+
     .nav-logo {
         margin-left: 0px;
     }
 
-    .nav-responsive{
-        display:flex;
-        width:100%;
+    .nav-responsive {
+        display: flex;
+        width: 100%;
     }
-    
+
     .nav-toggle {
-        display:block;
-        justify-content:flex-end;
-        margin-left:40%;
-        margin-top:7%;
+        display: block;
+        justify-content: flex-end;
+        margin-left: 40%;
+        margin-top: 7%;
         width: 40px;
         height: 40px;
         background-color: #333;
@@ -107,47 +100,44 @@ p{
         line-height: 40px;
         cursor: pointer;
     }
-    
+
     .nav-toggle:hover {
         background-color: black;
     }
-    
+
     .nav-menu.active {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align:center;
-        padding:0;
-        margin:0;
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
-    
+
     .nav-item {
         display: flex;
-        width:100%;
+        width: 100%;
         justify-content: center;
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
     }
 }
 
-/* Pour le slider : */
-
+/* Slider Styles */
 .slider {
     width: 60%;
     overflow: hidden;
-    margin:0 auto;
-    margin-top:2%;
-  }
-  
-  .slides {
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.slides {
     display: flex;
     width: 400%;
-  }
-  
-  .slides img {
-    width: calc(100% / 4); 
+}
+
+.slides img {
+    width: calc(100% / 4);
     flex-shrink: 0;
-  }
-  
-  
+}

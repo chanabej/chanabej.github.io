@@ -1,33 +1,30 @@
 const toggleButton = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.querySelector('.nav-menu');
 
-  toggleButton.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
+toggleButton.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
 
-// Pour le slider : 
-
-let position = 0;
 const slides = document.querySelector('.slides');
+let position = 0;
 
 function swipe(direction) {
-  const width = document.querySelector('.slides img').clientWidth;
+  const width = slides.querySelector('img').clientWidth;
   const totalSlides = document.querySelectorAll('.slides img').length;
-  if (direction === 'left' && position < totalSlides - 1) {
-    position++;
-  } else if (direction === 'left' && position === totalSlides - 1) {
-    position = 0;
-  } else if (direction === 'right' && position > 0) {
-    position--;
-  } else if (direction === 'right' && position === 0) {
-    position = totalSlides - 1;
+
+  if (direction === 'left') {
+    position = (position + 1) % totalSlides;
+  } else if (direction === 'right') {
+    position = (position - 1 + totalSlides) % totalSlides;
   }
+
   slides.style.transform = `translateX(-${position * width}px)`;
 }
 
 slides.addEventListener('touchstart', e => {
   const touchStartX = e.touches[0].clientX;
   let touchEndX = 0;
+
   slides.addEventListener('touchend', function swipeOnTouchEnd(e) {
     touchEndX = e.changedTouches[0].clientX;
     const direction = touchStartX > touchEndX ? 'left' : 'right';
@@ -50,4 +47,3 @@ if (!("ontouchstart" in document.documentElement)) {
     swipe(direction);
   });
 }
-

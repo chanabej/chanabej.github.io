@@ -52,7 +52,7 @@ body {
 }
 
 .nav-item a:hover {
-    color: gold;
+    opacity:50%;
 }
 
 .nav-toggle {
@@ -69,7 +69,7 @@ body {
     overflow: hidden;
     margin: 0 auto;
     margin-top: 2%;
-    margin-bottom: 4%;
+    margin-bottom: 1%;
     position: relative; /* Ajouté */
 }
 
@@ -87,6 +87,28 @@ body {
 .slider-navigation {
     display: none;
 }
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-bottom:2%;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+    background-color: black;
+  }
+
+
+
 
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
@@ -199,6 +221,17 @@ body {
         opacity:50%;
     }
 
+    .nav-item{
+        margin-bottom:10px;
+    }
 
+    .text{
+        text-align:center;
+        text-decoration:bold;
+        margin-right:30%;
+        margin-left:30%;
+        font-size:200%;
+        font-weight:bold;
+      }
 }
     
